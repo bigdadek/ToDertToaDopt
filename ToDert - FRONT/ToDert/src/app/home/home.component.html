@@ -1,0 +1,164 @@
+   <!-- Header Start -->
+   <div class="container-fluid bg-primary px-0 px-md-5 mb-5">
+    <div class="row align-items-center px-3">
+        <div class="col-lg-6 text-center text-lg-left">
+            <h4 class="text-white mb-4 mt-5 mt-lg-0">Every Kid deseves Home, Life *ToDert*.</h4>
+            <h1 class="display-3 font-weight-bold text-white">ToDert To aDopt</h1>
+            <p class="text-white mb-4">The main reason for creating this website is to help as many
+kids as we can, and that’s by finding families for them.</p>
+           
+        </div>
+        <div class="col-lg-6 text-center text-lg-right">
+            <img class="img-fluid mt-5" src="../../assets/Images/header.jpg" alt="">
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+
+
+<!-- EVENTS Start -->
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center pb-2">
+            <p class="section-title px-5"><span class="px-2">Events</span></p>
+            <h1 class="mb-4">Attend an event</h1>
+        </div>
+        <div class="row">
+        <!-- Event Start -->
+            <div class="col-lg-4 mb-5" *ngFor = "let event of events | paginate: { itemsPerPage: perPage, currentPage: p }"  >
+                <div class="card border-0 bg-light shadow-sm pb-2">
+                    <img style="border-radius: 100%;" class="card-img-top mb-2" src="../assets/images/Event.jpg" >
+                    <div class="card-body text-center">
+                        <h4 class="card-title">{{event.title}}</h4>
+                        <p class="card-text">{{event.description}}</p>
+                    </div>
+                    <div class="card-footer bg-transparent py-4 px-5">
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-right border-right"><strong>Type of Event</strong></div>
+                            <div class="col-6 py-1">{{event.type}}</div>
+                        </div>
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-right border-right"><strong>Total Seats</strong></div>
+                            <div class="col-6 py-1">{{event.seats}} Seats</div>
+                        </div>
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-right border-right"><strong>Event Time</strong></div>
+                            <div class="col-6 py-1">{{event.start_hour}}:00 - {{event.end_hour}}:00</div>
+                        </div>
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-right border-right"><strong>Event Date</strong></div>
+                            <div class="col-6 py-1">{{event.day}}/{{event.month}}/2022</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 py-1 text-right border-right"><strong>Event Fee</strong></div>
+                            <div class="col-6 py-1">{{event.fee}} Dh</div>
+                        </div>
+                    </div>
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
+                </div>
+            </div>
+            
+          <!-- Event end -->
+        </div>
+    </div>
+</div>
+<!-- EVENTS End -->
+
+<!-- Registration Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <a href="" class="btn btn-primary mt-4 py-2 px-4" >See more events</a>
+    </div>
+</div>
+<!-- Registration End -->
+
+
+<!-- Team Start -->
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center pb-2">
+            <p class="section-title px-5"><span class="px-2">Orphanages</span></p>
+            <h1 class="mb-4">ToDert's Orphanages</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-lg-3 text-center team mb-5" *ngFor="let o of orphanages  | paginate: { itemsPerPage: perPage, currentPage: p }" >
+                <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%;">
+                    <img class="img-fluid w-100" src="../../assets/Images/Orphanage.jpg"  >
+                    <div
+                        class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+                        <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                            href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px;"
+                            href="#"><i class="fa-regular fa-circle-info"></i></a>
+                    </div>
+                </div>
+                <h4>{{o.name}}</h4>
+                <i>{{o.address}}</i>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+<!-- Registration Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <a routerLink="events"  class="btn btn-primary mt-4 py-2 px-4" >See more events</a>
+    </div>
+</div>
+<!-- Registration End -->
+
+<!-- Testimonial Start -->
+<div class="container-fluid py-5">
+    <div class="container p-0">
+        <div class="text-center pb-2">
+            <p class="section-title px-5"><span class="px-2">Quotes</span></p>
+            <h1 class="mb-4">What People Say!</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel">
+            <div class="testimonial-item px-3">
+               <div class="d-flex align-items-center">
+                    <img class="rounded-circle" src="../../assets/Images/Nicole.jpg" style="width: 70px; height: 70px;" alt="Image">
+                    <div class="pl-3">
+                        <h5>Nicole Kidman</h5>
+                        <i>Actress and producer.</i>
+                    </div>
+                </div>
+             <div class="bg-light shadow-sm rounded mb-4 p-4">
+                    <h3 class="fas fa-quote-left text-primary mr-3"></h3>
+                   “Somehow destiny comes into play. These children end up with you and you end up with them. It’s something quite magical.”
+                </div>
+                </div>
+            <br><br>
+            <div class="testimonial-item px-3">
+                <div class="d-flex align-items-center">
+                    <img class="rounded-circle" src="../../assets/Images/Scott.jpg" style="width: 70px; height: 70px;" alt="Image">
+                    <div class="pl-3">
+                        <h5>Scott Simon</h5>
+                        <i>Writers and broadcasters.</i>
+                    </div>
+                </div>
+                <div class="bg-light shadow-sm rounded mb-4 p-4">
+                    <h3 class="fas fa-quote-left text-primary mr-3"></h3>
+                    “There are times when the adoption process is exhausting and painful and makes you want to scream. But, I am told, so does childbirth.”
+                </div>
+            </div>
+            <br><br>
+            <div class="testimonial-item px-3">
+                <div class="d-flex align-items-center">
+                    <img class="rounded-circle" src="../../assets/Images/Jamie.jpg" style="width: 70px; height: 70px;" alt="Image">
+                    <div class="pl-3">
+                        <h5>Jamie Lee Curtis</h5>
+                        <i>Actress</i>
+                    </div>
+                </div>
+                 <div class="bg-light shadow-sm rounded mb-4 p-4">
+                    <h3 class="fas fa-quote-left text-primary mr-3"></h3>
+                    “We look at adoption as a very sacred exchange. It was not done lightly on either side. I would dedicate my life to this child.” 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->

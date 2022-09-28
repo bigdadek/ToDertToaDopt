@@ -1,0 +1,62 @@
+ <!-- Header Start -->
+ <div class="container-fluid bg-primary mb-5">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+        <h3 class="display-3 font-weight-bold text-white">Events</h3>
+        <div class="d-inline-flex text-white">
+            <p class="m-0"><a class="text-white" href="">Home</a></p>
+            <p class="m-0 px-2">/</p>
+            <p class="m-0">Events</p>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+
+
+<!-- EVENTS Start -->
+<div class="container-fluid pt-5">
+    <div class="container">
+        <div class="text-center pb-2">
+            <p class="section-title px-5"><span class="px-2">Events</span></p>
+            <h1 class="mb-4">Attend an event</h1>
+        </div>
+        <div class="row">
+        
+        <!-- Event Start -->
+            <div class="col-lg-4 mb-5" *ngFor = "let event of events" >
+                <div class="card border-0 bg-light shadow-sm pb-2">
+                    <img class="card-img-top mb-2" src="../../assets/Images/Event.jpg" >
+                    <div class="card-body text-center">
+                        <h4 class="card-title">{{event.title}}</h4>
+                        <p class="card-text">{{event.description}}</p>
+                    </div>
+                    <div class="card-footer bg-transparent py-4 px-5">
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-right border-right"><strong>Type of Event</strong></div>
+                            <div class="col-6 py-1">{{event.type}}</div>
+                        </div>
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-right border-right"><strong>Total Seats</strong></div>
+                            <div class="col-6 py-1">{{event.seats}} Seats</div>
+                        </div>
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-right border-right"><strong>Event Time</strong></div>
+                            <div class="col-6 py-1">{{event.start_hour}}:00 - {{event.end_hour}}:00</div>
+                        </div>
+                        <div class="row border-bottom">
+                            <div class="col-6 py-1 text-right border-right"><strong>Event Date</strong></div>
+                            <div class="col-6 py-1">{{event.day}}/{{event.month}}/2022</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 py-1 text-right border-right"><strong>Event Fee</strong></div>
+                            <div class="col-6 py-1">{{event.fee}} Dh</div>
+                        </div>
+                    </div>
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
+                </div>
+            </div>
+          <!-- Event end -->
+        </div>
+    </div>
+</div>
+<!-- EVENTS End -->

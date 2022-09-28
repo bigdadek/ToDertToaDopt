@@ -1,0 +1,174 @@
+
+<div class="container-fluid py-5">
+    <div class="kbcenter" class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <div class="card border-0">
+                    <div class="card-header bg-secondary text-center p-4">
+                        <h1 class="text-white m-0">Add a new event :</h1>
+                    </div>
+                    <div class="card-body rounded-bottom bg-primary p-5">
+                        <form (ngSubmit) = "onSubmit()" >
+                            <div class="form-group">
+                                <input type="text" [(ngModel)] = "event.title"  class="form-control border-0 p-4" placeholder="Event Title" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" [(ngModel)] = "event.description" class="form-control border-0 p-4" placeholder="Event Description" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select border-0 px-4" style="height: 47px;">
+                                    <option selected [(ngModel)] = "event.type">Event Type</option>
+                                    <option value="Fundraising">Fundraising</option>
+                                    <option value="Celebration">Celebration</option>
+                                    <option value="Charity">Charity</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" [(ngModel)] = "event.seats" class="form-control border-0 p-4" placeholder="Event Seats" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select border-0 px-4" [(ngModel)] = "event.start_hour" style="height: 47px;">
+                                    <option selected>Event Start Hour</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="00">00</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select border-0 px-4" [(ngModel)] = "event.end_hour"style="height: 47px;">
+                                    <option selected>Event End Hour</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="00">00</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select border-0 px-4" [(ngModel)] = "event.day" style="height: 47px;">
+                                    <option selected>Event Day</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="14">24</option>
+                                    <option value="15">25</option>
+                                    <option value="16">26</option>
+                                    <option value="17">27</option>
+                                    <option value="18">28</option>
+                                    <option value="19">29</option>
+                                    <option value="20">30</option>
+                                    <option value="21">31</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select border-0 px-4" [(ngModel)] = "event.month" style="height: 47px;">
+                                    <option selected>Event Month</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select border-0 px-4" [(ngModel)] = "event.year" style="height: 47px;">
+                                    <option selected>Event year</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option value="2030">2030</option>
+                                    <option value="2031">2031</option>
+                                    <option value="2032">2032</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control border-0 p-4" [(ngModel)] = "event.fee" placeholder="Event fee" required="required" />
+                            </div>
+                               
+                            <div class="form-group">
+                                <input type="text" class="form-control border-0 p-4" name="fee" id="fee" [(ngModel)] = "event.fee" placeholder="Your Password" required="required" />
+                            </div>
+                           
+                            <div>
+                                <button class="btn btn-secondary btn-block border-0 py-3" value="save" type="submit">Save Event</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Registration End -->
